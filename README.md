@@ -19,3 +19,21 @@ mv ~/Downloads/tensorflow-1.15.0-cp37-cp37m-linux_x86_64.whl ./wheels/
 ```bash
 docker-compose up --build
 ```
+
+## 4. (optional) 인터랙티브 쉘 접속
+
+```bash
+docker-compose run --rm mecha bash
+```
+
+---
+
+```bash
+# build 완료후
+python Check_dependencies_laptop.py
+```
+
+```bash
+# 쉘 탈출
+exit
+```

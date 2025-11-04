@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  mecha:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+    container_name: mecha_container
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      MPLBACKEND: Agg
+      DISPLAY: ""
+      PYTHONUNBUFFERED: "1"
+      PYTHONFAULTHANDLER: "1"
+    command: python Check_dependencies_laptop.py
+    stdin_open: true
+    tty: true
